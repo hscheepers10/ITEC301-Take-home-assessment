@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+
+<body>
+
+    <body>
+        <form class="" action="MannakaRegistration.html" method="post">
+            <div class="registrationBox" align="center">
+                <fieldset class="fieldWidth">
+                    <legend><b>Registration</b></legend>
+                    </br>
+
+                    <div align="left">
+                        <!--firstname-->
+                        <label for="fName">First Name:</label></br>
+                        <input class="inputBox" id="fName" name="firstName" value=""
+                            placeholder="Enter your first name">
+                        <!--surname-->
+                        </br></br>
+                        <label for="lName">Last Name:</label></br>
+                        <input class="inputBox" id="lName" name="surtName" value="" placeholder="Enter your last name">
+                        <!--email-->
+                        </br></br>
+                        <label for="uEmail">Email:</label></br>
+                        <input class="inputBox" id="uEmail" name="email" value="" placeholder="Enter your email">
+                        <!--User name-->
+                        </br></br>
+                        <label for="UName">Username:</label></br>
+                        <input class="inputBox" id="UName" name="" value="" placeholder="Enter your username">
+                        </br></br>
+                        <!--Password -->
+                        <label for="UPass">Password:</label></br>
+                        <input type="password" class="inputBox" id="UPass" name="" value=""
+                            placeholder="Enter your password">
+                        </br>
+                        </br>
+
+                        <div align="right">
+                            <button class="buttonS" type="button" onclick="allValidate()" name="button">Login</button>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+            <!-- JSCRIPT -->
+            <script type="text/javascript">
+                function validateFirst() {
+                    var first = document.getElementById("fName").value;
+                    if (first == "") {
+                        alert("Please provide firstname");
+                        return true;
+                    }
+                }
+                function validateSur() {
+                    var sur = document.getElementById("lName").value;
+                    if (sur == "") {
+                        alert("Please provide surname");
+                        return true;
+                    }
+                }
+                function validateEmail() {
+                    var emailToVal = document.getElementById("uEmail").value;
+                    var emailValidated = emailToVal.search(/^\S+@\S+\.\S+$/);
+                    if (emailValidated != 0) {
+                        alert("Please provide email");
+                        return true;
+                    }
+                }
+                function validateUser() {
+                    var user = document.getElementById("UName").value;
+                    if (user == "") {
+                        alert("Please provide username");
+                        return true;
+                    }
+                }
+                function validatePass() {
+                    var pass = document.getElementById("UPass").value;
+                    if (pass == "") {
+                        alert("Please provide password");
+                        return true;
+                    }
+                }
+                function allValidate() {
+                    var firstVal = validateFirst();
+                    var lastVal = validateSur();
+                    var emailVal = validateEmail();
+                    var userVal = validateUser();
+                    var passVal = validatePass();
+
+                    if (firstVal == true) {
+                        validateFirst();
+                    }
+                    if (lasttVal == true) {
+                        validateSur();
+                    }
+                    if (emailVal == true) {
+                        validateEmail();
+                    }
+                    if (userVal == true) {
+                        validateUser();
+                    }
+                    if (passVal == true) {
+                        validatePass();
+                    }
+                }
+            </script>
+
+        </form>
+    </body>
+</body>
+
+</html>

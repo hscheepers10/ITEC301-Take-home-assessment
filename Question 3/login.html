@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <form action="MannakaLogin.html" method="post">
+
+        <div class="loginBox" align="center">
+            <fieldset class="fieldWidth">
+                <legend><b>Login</b></legend>
+                </br>
+
+                <div align="left">
+                    <!--USERNAME-->
+                    <label for="UName">Username:</label></br>
+                    <input class="inputBox" id="UName" name="" value="" placeholder="Enter your username">
+                    </br></br>
+                    <!--PASSWORD -->
+                    <label for="UPass">Password:</label></br>
+                    <input type="password" class="inputBox" id="UPass" name="" value=""
+                        placeholder="Enter your password">
+                    </br></br>
+                    <div align="right">
+                        <button class="buttonS" type="button" onclick="validate()" name="button">Login</button>
+                    </div>
+                </div>
+
+                <!-- JSCRIPT -->
+                <script type="text/javascript">
+                    function validateUser() {
+                        var user = document.getElementById("UName").value;
+                        if (user == '') {
+                            alert("Please provide your username!");
+                            return true;
+                        }
+                    }
+                    function validatePass() {
+                        var pass = document.getElementById("UPass").value;
+                        if (pass == '') {
+                            alert("Please provide your password!");
+                            return true;
+                        }
+                    }
+                    function validate() {
+                        var userVal = validateUser();
+                        var passVal = validatePass();
+
+                        if (userVal == true) {
+                            validateUser();
+                        }
+                        if (passVal == true) {
+                            validatePass();
+                        }
+                    }
+                </script>
+
+            </fieldset>
+        </div>
+    </form>
+</body>
+
+</html>
